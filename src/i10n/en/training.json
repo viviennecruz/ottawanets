@@ -1,0 +1,19 @@
+{
+    "title1": "Ottawa Nets Basketball Training",
+    "desc": "We offer specialized 1-on-1 and group training for players looking to improve their basketball skills.",
+    "title2": "Sign up for training",
+    "fname": "First name",
+    "lname": "Last name",
+    "email": "Email",
+    "phone": "Phone",
+    "q1": "Do you currently play for the Nets?",
+    "opt1": "House league",
+    "opt2": "Rep league",
+    "opt3": "No",
+    "q2": "Are you interested in 1-on-1 or group training?",
+    "option1": "1-on-1 training",
+    "option2": "Group training",
+    "q3": "What are you looking to improve on?",
+    "type": "Type here",
+    "submit": "Submit"
+}

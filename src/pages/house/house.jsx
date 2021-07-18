@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Row, Col, Carousel, Button, Form } from 'react-bootstrap';
+import "react-datetime/css/react-datetime.css";
 import Datetime from 'react-datetime';
 
 import style from "./house.css";
@@ -8,6 +9,7 @@ import style from "./house.css";
 import img7 from '../../assests/bballpic7.jpg';
 import img8 from '../../assests/bballpic8.jpg';
 import img9 from '../../assests/bballpic9.png';
+import team from '../../assests/basketball-player.png';
 
 export class House extends Component {
     render() {
@@ -37,23 +39,30 @@ export class House extends Component {
                     </Carousel.Item>
                 </Carousel>
 
-                <Row>
+                <Row id="main">
                     <Col>
                         <h2>Ottawa Nets House League</h2>
-                        <p>House league teams work on skill improvement and compete in games
-                            on a friendly basis. Our emphasis is on skills development and 
-                            team play.
-                        </p>
+                        <Row>
+                            <Col>
+                                <h3 id="hl">House league teams work on skill improvement and compete in games
+                                on a friendly basis. Our emphasis is on skills development and 
+                                team play.
+                                </h3>
+                            </Col>
+                            <Col>
+                                <img src= { team } alt="" id="team"/>
+                            </Col>
+                        </Row>
                     </Col>
                 </Row>
 
-                <Row>
+                <Row id="main">
                     <Col>
                         <h2>Sign up for house league</h2>
                     </Col>
                 </Row>
 
-                <Row>
+                <Row id="main">
                     <Col>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                             <Form.Label>First name</Form.Label>
@@ -68,7 +77,7 @@ export class House extends Component {
                     </Col>
                 </Row>
 
-                <Row>
+                <Row id="main">
                     <Col>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                             <Form.Label>Last name</Form.Label>
@@ -80,12 +89,17 @@ export class House extends Component {
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                             <Form.Label>Grade</Form.Label>
                             <Form.Control type="text" placeholder="Grade" />
+                            <Form.Control.Feedback tooltip>Looks good!</Form.Control.Feedback>
                         </Form.Group>
                     </Col>
                 </Row>
 
-                <Row>
+                <Row id="main">
                     <Col>
+                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                            <Form.Label>Age</Form.Label>
+                            <Form.Control type="text" placeholder="Age" />
+                        </Form.Group>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                             <Form.Label>Email</Form.Label>
                             <Form.Control type="email" placeholder="Email" />
@@ -133,7 +147,7 @@ export class House extends Component {
                     </Col>
                 </Row>
 
-                <Row>
+                <Row id="main">
                     <Col>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                             <Form.Label>Phone number</Form.Label>
@@ -145,9 +159,9 @@ export class House extends Component {
                     </Col>
                 </Row>
 
-                <Row>
+                <Row id="main">
                     <Col>
-                        <Button variant="outline-dark">Submit</Button>
+                        <Button variant="outline-dark" type="submit">Submit</Button>
                     </Col>
                 </Row>
             </div> 

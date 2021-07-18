@@ -12,3 +12,13 @@ body {
 code {
   font-family: 'Poppins', sans-serif;
 }
+
+#train {
+  margin-left: 20%;
+  margin-top: 10%;
+}
+
+#girl {
+  margin-left: 25%;
+  width: 40%;
+}

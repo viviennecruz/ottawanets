@@ -12,3 +12,30 @@ body {
 code {
   font-family: 'Poppins', sans-serif;
 }
+
+h3 {
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+}
+
+h2 {
+  font-size: 60px;
+}
+
+#player {
+  width: 50%;
+  margin-left:100px;
+}
+
+#medal {
+  width:20%;
+  margin-left: 40%;
+}
+
+#contain {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}

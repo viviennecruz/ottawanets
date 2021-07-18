@@ -7,6 +7,7 @@ import style from "./rep.css";
 import img10 from '../../assests/bballpic10.jpg';
 import img11 from '../../assests/bballpic11.jpg';
 import img12 from '../../assests/bballpic12.jpg';
+import pg from '../../assests/basketball-3.png';
 
 export class Rep extends Component {
     render() {
@@ -36,32 +37,40 @@ export class Rep extends Component {
                     </Carousel.Item>
                 </Carousel>
 
-                <Row>
+                <Row id="main">
                     <Col>
                         <h2>
                             Ottawa Nets Rep Basketball
                         </h2>
-                        <p>
-                            Competitive teams compete against teams across the province.
-                            Our emphasis is on skill improvement and performance on the court.
-                        </p>
+                        <Row>
+                            <Col>
+                                <h3 id="rl">
+                                Competitive teams compete against teams across the province.
+                                Our emphasis is on skill improvement and performance on the court.
+                                </h3>
+                            </Col>
+                            <Col>
+                                <img src= { pg } alt="" id="guy"/>
+                            </Col>
+                        </Row>
+                        
                     </Col>
                 </Row>
 
-                <Row>
+                <Row id="main">
                     <Col>
                         <h2>2020-21 Rep teams tryout schedule</h2>
-                        <p>All players must attend all tryout dates for their age group.</p>
+                        <h3>All players must attend all tryout dates for their age group.</h3>
                     </Col>
                 </Row>
 
-                <Row>
+                <Row id="main">
                     <Col>
                         <h2>Girls basketball</h2>
                     </Col>
                 </Row>
 
-                <Row>
+                <Row id="main">
                     <Col>
                         <h4>U11 Atom</h4>
                         <p>September 3rd, 7-9pm</p>
@@ -84,7 +93,7 @@ export class Rep extends Component {
                     </Col>
                 </Row>
 
-                <Row>
+                <Row id="main">
                     <Col>
                         <h4>U12 Major Atom</h4>
                         <p>September 10th, 5-7pm</p>
@@ -107,13 +116,13 @@ export class Rep extends Component {
                     </Col>
                 </Row>
 
-                <Row>
+                <Row id="main">
                     <Col>
                         <h2>Boys basketball</h2>
                     </Col>
                 </Row>
 
-                <Row>
+                <Row id="main">
                     <Col>
                         <h4>U11 Atom</h4>
                         <p>September 1st, 5-7pm</p>
@@ -136,7 +145,7 @@ export class Rep extends Component {
                     </Col>
                 </Row>
 
-                <Row>
+                <Row id="main">
                     <Col>
                         <h4>U12 Major Atom</h4>
                         <p>September 15th, 5-7pm</p>

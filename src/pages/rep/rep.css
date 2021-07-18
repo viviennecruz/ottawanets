@@ -12,3 +12,13 @@ body {
 code {
   font-family: 'Poppins', sans-serif;
 }
+
+#rl {
+  margin-left: 20%;
+  margin-top: 15%;
+}
+
+#guy {
+  margin-left: 25%;
+  width: 40%;
+}

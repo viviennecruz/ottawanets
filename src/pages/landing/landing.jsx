@@ -11,7 +11,7 @@ import icon1 from '../../assests/muscle.png';
 import icon2 from '../../assests/speech-bubble.png';
 import icon3 from '../../assests/support.png';
 import icon4 from '../../assests/thinking.png';
-import icon5 from '../../assests/basketball.png';
+import icon5 from '../../assests/basketball-2.png';
 
 
 export class Landing extends Component {
@@ -42,27 +42,27 @@ export class Landing extends Component {
                 </Carousel.Item>
             </Carousel>
 
-            <Container>
+            <div className="content">
             <Row>
                 <Col>
                     <h1>Our Mission</h1>
-                    <Row>
+                    <Row className="justify-content-md-center">
                         <Col>
                             <img src= { icon5 } alt="" id="bball"/>
                         </Col>
                         <Col>
-                            <Container className="my-auto">
-                                <h3>"To build an enriching setting for youth, using basketball
+                            {/* <Container className="my-auto"> */}
+                                <h3 id="mission">"To build an enriching setting for youth, using basketball
                                     as a vehicle to inspire them to fulfill their academic, 
                                     physical, and personal potential."
                                 </h3>
-                            </Container>
+                            {/* </Container> */}
                         </Col>
                     </Row> 
                 </Col>
             </Row>
 
-            <Row>
+            <Row id="values">
                 <Col>
                     <h2>Our Values</h2>
                     <Row>
@@ -132,15 +132,22 @@ export class Landing extends Component {
             <Row>
                 <Col>
                     <h2>Interested in becoming an Ottawa Net?</h2>
-                    <Button className="text-center" variant="outline-dark">Learn more</Button>
+                    <div
+                        style={{
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                        }}
+                        >  <Button className="button" variant="outline-dark">Learn more</Button>
+                    </div>
+                   
                 </Col>
             </Row>
-            </Container>
+            </div>
             
           </div>
       );
     }
   }
   
-//   export default withTranslation(["general", "landing"])(Landing);
 export default Landing;

@@ -1,0 +1,19 @@
+{
+    "title1": "Ottawa Nets Basketball Training",
+    "desc": "Nag-aalok kami ng dalubhasang 1-on-1 at pangkat na pagsasanay para sa mga manlalaro na naghahanap upang mapabuti ang kanilang mga kasanayan sa basketball.",
+    "title2": "Mag-sign up para sa pagsasanay",
+    "fname": "Pangalan",
+    "lname": "Huling pangalan",
+    "email": "Email",
+    "phone": "Telepono",
+    "q1": "Naglalaro ka ba ngayon para sa Nets?",
+    "opt1": "Liga ng bahay",
+    "opt2": "Liga ng kumpetisyon",
+    "opt3": "Hindi",
+    "q2": "Interesado ka ba sa 1-on-1 o pagsasanay sa pangkat?",
+    "option1": "1-sa-1 na pagsasanay",
+    "option2": "Pagsasanay sa pangkat",
+    "q3": "Ano ang hinahanap mo upang pagbutihin?",
+    "type": "Magsulat Dito",
+    "submit": "Ipasa"
+}

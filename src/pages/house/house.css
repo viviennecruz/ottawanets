@@ -12,3 +12,19 @@ body {
 code {
   font-family: 'Poppins', sans-serif;
 }
+
+#main {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 20px;
+}
+
+#team {
+  margin-left: 25%;
+  width: 40%;
+}
+
+#hl {
+  margin-left: 20%;
+  margin-top: 10%;
+}

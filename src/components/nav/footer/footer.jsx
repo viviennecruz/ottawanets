@@ -4,44 +4,46 @@ import { Navbar, Container, Nav, NavDropdown , Row, Col, Form, Button } from 're
 import twitter from '../../../assests/twitter.png';
 import instagram from '../../../assests/instagram.png';
 import facebook from '../../../assests/facebook.png';
+import bball from '../../../assests/basketball.png';
+
+import style from "./footer.css";
+
 
 export class Footer extends Component {
     render () {
         return (
-            <Container id="contact">
-                <Row>
+            <div id="contact">
+                <Row>       
                     <Col>
                         <h3>Come hoop with us @</h3>
-                        <p>80 George St.</p>
-                        <p>Ottawa, ON K1N 5W1</p>
-                        <p>admin@ottawanets.com</p>
-                        <p>(289)-681-1448</p>
+                        <Row>
+                            <Col>
+                                <img src= { bball } alt="" id="bballnet"/>
+                            </Col>
+                            <Col>
+                                <p>80 George St.</p>
+                                <p>Ottawa, ON K1N 5W1</p>
+                                <p>admin@ottawanets.com</p>
+                                <p>(289)-681-1448</p>
+                            </Col>
+                        </Row>
                     </Col>
-                        
+
                     <Col>
                         <h3>Socials</h3>
                         <Row>
                             <Col>
-                                <img src= { instagram } alt="" class="icon"/>
-                            </Col>
-                            <Col>
-                                <p>@ottawanets</p>
+                                <p id="handle"> <img src= { instagram } alt="" class="icon"/> @ottawanets</p>
                             </Col>
                         </Row>
                         <Row>
                             <Col>
-                                <img src= { twitter } alt="" class="icon"/>
-                            </Col>
-                            <Col>
-                                <p>@ottawa_nets</p>
+                                <p id="handle"> <img src= { twitter } alt="" class="icon"/> @ottawa_nets</p>
                             </Col>
                         </Row>
                         <Row>
                             <Col>
-                                <img src= { facebook } alt="" class="icon"/>
-                            </Col>
-                            <Col>
-                                <p>Ottawa Nets Basketball</p>
+                                <p id="handle"> <img src= { facebook } alt="" class="icon"/> Ottawa Nets Basketball</p>
                             </Col>
                         </Row>
                         {/* <p> <img src= { instagram } alt=""/> @ottawanets</p>
@@ -74,7 +76,7 @@ export class Footer extends Component {
                         </Form>
                     </Col>
                 </Row>
-            </Container>            
+            </div>            
         );
     }
 }

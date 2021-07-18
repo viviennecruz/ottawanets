@@ -15,6 +15,7 @@ code {
 
 h1 {
   text-align: center;
+  font-size: 75px;
 }
 
 h2 {
@@ -27,10 +28,21 @@ h3 {
 
 #bball {
   width: 70%;
+  padding-left: 150px;
+  margin-left: 80px;
 }
 
 #icon {
   width: 100%;
+}
+
+#mission {
+  margin-right: 100px;
+  margin-top: 120px;
+}
+
+.content {
+  margin: 20px;
 }
 
 .vertical-center {
@@ -39,4 +51,15 @@ h3 {
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#values {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }

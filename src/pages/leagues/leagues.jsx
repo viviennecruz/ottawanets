@@ -11,13 +11,15 @@ import white from '../../assests/white.jpg';
 import review1 from '../../assests/review1.png';
 import review2 from '../../assests/review2.png';
 import review3 from '../../assests/review3.png';
-
+import bball1 from '../../assests/basketball-player.png';
+import bball2 from '../../assests/basketball-3.png';
+import medal from '../../assests/medal.png';
 
 export class Leagues extends Component {
     render() {
         return (
             <div>
-                <Carousel fade>
+                <Carousel>
                     <Carousel.Item>
                         <img
                         className="d-block w-100"
@@ -41,54 +43,96 @@ export class Leagues extends Component {
                     </Carousel.Item>
                 </Carousel>
 
-                <Container>
-                <Row>
+                <Row id="contain">
                     <Col>
                         <h2>House league</h2>
-                        <h4>Friendly competition</h4>
-                        <p>Practice frequency: 1-2 practices/week</p>
-                        <p>Game frequency: 1 game/week</p>
-                        <p>Tournament frequency: 1-2/tournaments per season</p>
+                        <Row>
+                            <Col>
+                                <img src={ bball1 } alt="" id="player"/>
+                            </Col>
+                            <Col>
+                                <h3>Friendly competition</h3>
+                                <p>Practice frequency: 1-2 practices/week</p>
+                                <p>Game frequency: 1 game/week</p>
+                                <p>Tournament frequency: 1-2/tournaments per season</p>
+                            </Col>
+                        </Row>
+                        
                         <Link to="/house">
-                            <Button variant="outline-dark">Learn more</Button>
+                            <div
+                            style={{
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                            }}
+                            >  <Button className="button" variant="outline-dark">Learn more</Button>
+                            </div>
                         </Link>
                         
                     </Col>
 
                     <Col>
                         <h2>Rep league</h2>
-                        <h4>Regional and provincial competition</h4>
-                        <p>Practice frequency: 2-3 practices/week</p>
-                        <p>Game frequency: 1 game/week</p>
-                        <p>Tournament frequency: 4-8/tournaments per season</p>
+                        <Row>
+                            <Col>
+                                <img src={ bball2 } alt="" id="player"/>
+                            </Col>
+                            <Col>
+                                <h3>Regional and provincial competition</h3>
+                                <p>Practice frequency: 2-3 practices/week</p>
+                                <p>Game frequency: 1 game/week</p>
+                                <p>Tournament frequency: 4-8/tournaments per season</p>
+                            </Col>
+                        </Row>
+                       
                         <Link to="/rep">
-                            <Button variant="outline-dark">Learn more</Button>
+                        <div
+                            style={{
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                            }}
+                            >  <Button className="button" variant="outline-dark">Learn more</Button>
+                            </div>
                         </Link>
                         
                     </Col>
                 </Row>
 
-                <Row>
+                <Row id="contain">
                     <Col><h2>Why join the Ottawa Nets?</h2></Col>
                     <Row>
                         <Col>
                             <h4>We strive for excellence in basketball, teamwork, and sportsmanship.</h4>
+                            <img src={ medal } alt="" id="medal"/>
                         </Col>
                         <Col>
-                            <h4>Provincial titles</h4>
-                            <p>U18 Girls Gold 2020</p>
-                            <p>U16 Boys Silver 2020</p>
-                            <p>U17 Boys Gold 2020</p>
+                            <h3>Provincial titles</h3>
+                            <Row>
+                                <Col>
+                                    <p>U18 Girls Gold 2020</p>
+                                    <p>U16 Boys Silver 2020</p>
+                                    <p>U17 Boys Gold 2020</p>
+                                </Col>
+                                <Col>
+                                    <p>U18 Boys Gold 2019</p>
+                                    <p>U14 Girls Silver 2019</p>
+                                    <p>U17 Boys Silver 2019</p>
+                                </Col>
+                                <Col>
+                                    <p>U12 Boys Gold 2018</p>
+                                    <p>U14 Girls Silver 2018</p>
+                                    <p>U15 Girls Gold 2018</p>
+                                </Col>
+                            </Row>
                         </Col>
                     </Row>
                 </Row>
 
-                <Row>
+                <Row id="contain">
                     <Col><h2>What are people saying about the nets?</h2></Col>
                 </Row>
-                </Container>
-
-                
+              
                 <Carousel variant="dark">
                     <Carousel.Item>
                         <img
@@ -96,10 +140,6 @@ export class Leagues extends Component {
                         src={ review1 }
                         alt="First slide"
                         />
-
-                        {/* <Carousel.Caption>  
-                            <h4>"The nets have helped me improve my basketball skills!" - Marco Cen</h4>
-                        </Carousel.Caption> */}
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
@@ -107,10 +147,6 @@ export class Leagues extends Component {
                         src={ review2 }
                         alt="Second slide"
                         />
-
-                        {/* <Carousel.Caption>
-                            <h4>"The nets have helped me improve my basketball skills!" - Vivianne Yee</h4>
-                        </Carousel.Caption> */}
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
@@ -118,10 +154,6 @@ export class Leagues extends Component {
                         src={ review3 }
                         alt="Third slide"
                         />
-
-                        {/* <Carousel.Caption>
-                            <h4>"The nets have helped me improve my basketball skills!" - Taj Loodu</h4>
-                        </Carousel.Caption> */}
                     </Carousel.Item>
                 </Carousel>
             </div>

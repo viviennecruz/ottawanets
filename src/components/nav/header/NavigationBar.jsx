@@ -1,19 +1,34 @@
 import React, { Component } from "react";
-import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
+import { Navbar, Container, Nav, NavDropdown, Form } from 'react-bootstrap';
 import logo from '../../../assests/ottawanetslogo.png';
 import { Link } from "react-router-dom";
+import { withTranslation } from "react-i18next";
 
 export class NavigationBar extends Component {
-  state = {
-    current: 'about',
+  // state = {
+  //   current: 'about',
+  // };
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      lang: this.props.i18n.language,
+    };
+  }
+
+  handleChange = (newlang) => {
+    this.setState({ lang: newlang });
+    //console.log("state value is", newlang);
+    this.props.i18n.changeLanguage(newlang);
   };
 
-handleClick = e => {
-    console.log('click ', e);
-    this.setState({ current: e.key });
-  };
+// handleClick = e => {
+//     console.log('click ', e);
+//     this.setState({ current: e.key });
+//   };
   render() {
-    const { current } = this.state;
+    const { t } = this.props;
+    // const { current } = this.state;
     return (
       <Navbar bg="light" expand="lg">
       <Container>
@@ -52,6 +67,35 @@ handleClick = e => {
           </NavDropdown>
           <Nav.Link><Link to="/training">Training</Link></Nav.Link>
           <Nav.Link href="#contact">Contact us</Nav.Link>
+          <NavDropdown title="English" id="basic-nav-dropdown" value={this.state.lang} onChange={this.handleChange}>
+            {/* <Link to="/leagues">
+              <NavDropdown.Item href="#action/3.4">Leagues</NavDropdown.Item>
+            </Link>
+            
+            <NavDropdown.Divider /> */}
+
+            {/* <Link to="/house"> */}
+              <NavDropdown.Item value="en">English</NavDropdown.Item>
+            {/* </Link> */}
+
+            {/* <Link to="/rep"> */}
+              <NavDropdown.Item value="ph">Tagalog</NavDropdown.Item>
+            {/* </Link> */}
+            
+          </NavDropdown>
+          <Nav.Link>
+            <Form.Control 
+            as="select"
+            value={this.state.lang} 
+            onChange={this.handleChange.bind(this)}>
+              <option value={"en"}>
+                <span>{t('language.english')}</span>
+              </option>
+              <option value={"ph"}>
+                <span>{t('language.tagalog')}</span>
+              </option>
+            </Form.Control>
+          </Nav.Link>
         </Nav>
       </Navbar.Collapse>
       </Container>
@@ -60,4 +104,4 @@ handleClick = e => {
   }
 }
  
-export default NavigationBar;
+export default  withTranslation()(NavigationBar);

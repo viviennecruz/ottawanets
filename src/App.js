@@ -19,7 +19,6 @@ function App() {
         <Route exact path ="/house" component={ House } />
         <Route exact path ="/rep" component={ Rep } />
         <Route exact path="/training" component={Training} />
-        {/* <Route exact path="/contact" component={Contact} />  */}
       </Switch>
     </Router>
   );
