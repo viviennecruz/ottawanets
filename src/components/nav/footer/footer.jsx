@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Navbar, Container, Nav, NavDropdown , Row, Col, Form, Button } from 'react-bootstrap';
+import { withTranslation, Trans } from "react-i18next";
 
 import twitter from '../../../assests/twitter.png';
 import instagram from '../../../assests/instagram.png';
@@ -11,11 +12,12 @@ import style from "./footer.css";
 
 export class Footer extends Component {
     render () {
+        const { t } = this.props;
         return (
             <div id="contact">
                 <Row>       
                     <Col>
-                        <h3>Come hoop with us @</h3>
+                        <h3>{t('footer:title1')}</h3>
                         <Row>
                             <Col>
                                 <img src= { bball } alt="" id="bballnet"/>
@@ -30,7 +32,7 @@ export class Footer extends Component {
                     </Col>
 
                     <Col>
-                        <h3>Socials</h3>
+                        <h3>{t('footer:title2')}</h3>
                         <Row>
                             <Col>
                                 <p id="handle"> <img src= { instagram } alt="" class="icon"/> @ottawanets</p>
@@ -52,26 +54,26 @@ export class Footer extends Component {
                     </Col>
 
                     <Col>
-                        <h3>Questions?</h3>
+                        <h3>{t('footer:title3')}</h3>
                         <Form>
                             <Row>
                             <Col>
                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                    <Form.Label>Name</Form.Label>
-                                    <Form.Control type="text" placeholder="Full Name" />
+                                    <Form.Label>{t('footer:name')}</Form.Label>
+                                    <Form.Control type="text" placeholder={t('footer:fullname')} />
                                 </Form.Group>
                             </Col>
                             <Col>
                                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
-                                    <Form.Label>Email address</Form.Label>
+                                    <Form.Label>{t('footer:email')}</Form.Label>
                                     <Form.Control type="email" placeholder="name@example.com" />
                                 </Form.Group>
                             </Col>
                             </Row>
                             <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                <Form.Label>Type here</Form.Label>
+                                <Form.Label>{t('footer:type')}</Form.Label>
                                 <Form.Control as="textarea" rows={3} />
-                                <Button variant="outline-dark">Submit</Button>
+                                <Button variant="outline-dark">{t('footer:submit')}</Button>
                             </Form.Group>
                         </Form>
                     </Col>
@@ -80,4 +82,4 @@ export class Footer extends Component {
         );
     }
 }
-export default Footer;
+export default withTranslation(["footer"])(Footer);

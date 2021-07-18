@@ -217,7 +217,7 @@ const Training = ({ t }) => {
 
             <Row id="main">
                 <Col>
-                    <Button variant="outline-dark" type='submit' onClick={ handleSubmit }>{t('submit')}</Button>
+                    <Button variant="outline-dark" type='submit' onClick={ handleSubmit }>{t('training:submit')}</Button>
                 </Col>
             </Row>
         

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Navbar, Container, Nav, NavDropdown, Form } from 'react-bootstrap';
 import logo from '../../../assests/ottawanetslogo.png';
-import { Link } from "react-router-dom";
-import { withTranslation, useTranslation } from "react-i18next";
+import { Link, NavLink } from "react-router-dom";
+import { withTranslation, useTranslation, Trans } from "react-i18next";
 
 // export class NavigationBar extends Component {
   function NavigationBar() {
@@ -31,33 +31,91 @@ import { withTranslation, useTranslation } from "react-i18next";
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
-          <Nav.Link><Link to="/">About us</Link></Nav.Link>
+          <Trans>
+          <Nav.Link><NavLink
+              exact to="/"
+              activeStyle={{
+                fontWeight: "bold",
+                color: "black",
+                'text-decoration': 'none'
+              }}
+              style={{
+                color: "grey",
+                'text-decoration': 'none'
+              }}
+            >{t('nav:tab1')}</NavLink></Nav.Link>
+          </Trans>
+          
          
-          <NavDropdown title="Leagues" id="basic-nav-dropdown">
-            <Link to="/leagues">
-              <NavDropdown.Item href="#action/3.4">Leagues</NavDropdown.Item>
-            </Link>
+          <NavDropdown title={t('nav:tab2')} id="basic-nav-dropdown">
+          <NavLink
+              exact to="/leagues"
+              activeStyle={{
+                fontWeight: "bold",
+                color: "black",
+                'text-decoration': 'none'
+              }}
+              style={{
+                color: "grey",
+                'text-decoration': 'none'
+              }}
+            >
+              <NavDropdown.Item href="#action/3.4">{t('nav:tab2')}</NavDropdown.Item>
+            </NavLink>
             
             <NavDropdown.Divider />
 
-            <Link to="/house">
-              <NavDropdown.Item href="#action/3.1">House league</NavDropdown.Item>
-            </Link>
+            <NavLink
+              exact to="/house"
+              activeStyle={{
+                fontWeight: "bold",
+                color: "black",
+                'text-decoration': 'none'
+              }}
+              style={{
+                color: "grey",
+                'text-decoration': 'none'
+              }}
+            >
+              <NavDropdown.Item href="#action/3.1">{t('nav:tab3')}</NavDropdown.Item>
+            </NavLink>
 
-            <Link to="/rep">
-              <NavDropdown.Item href="#action/3.2">Rep league</NavDropdown.Item>
-            </Link>
+            <NavLink
+              exact to="/rep"
+              activeStyle={{
+                fontWeight: "bold",
+                color: "black",
+                'text-decoration': 'none'
+              }}
+              style={{
+                color: "grey",
+                'text-decoration': 'none'
+              }}
+            >
+              <NavDropdown.Item href="#action/3.2">{t('nav:tab4')}</NavDropdown.Item>
+            </NavLink>
             
           </NavDropdown>
-          <Nav.Link><Link to="/training">Training</Link></Nav.Link>
-          <Nav.Link href="#contact">Contact us</Nav.Link>
+          <Nav.Link><NavLink
+              exact to="/training"
+              activeStyle={{
+                fontWeight: "bold",
+                color: "black",
+                'text-decoration': 'none'
+              }}
+              style={{
+                color: "grey",
+                'text-decoration': 'none'
+              }}
+            >{t('nav:tab5')}</NavLink></Nav.Link>
+          <Nav.Link href="#contact">{t('nav:tab6')}</Nav.Link>
 
-          <NavDropdown title={t("Language")} id="basic-nav-dropdown">
+          <NavDropdown title={t('nav:tab7')} id="basic-nav-dropdown">
             <NavDropdown.Item onClick={() => changeLanguage("en")}>
-              {t("English")}
+              {t('nav:tab8')}
             </NavDropdown.Item>
             <NavDropdown.Item onClick={() => changeLanguage("ph")}>
-              {t("Tagalog")}
+            {t('nav:tab9')}
             </NavDropdown.Item>
           </NavDropdown>
         </Nav>
@@ -68,4 +126,4 @@ import { withTranslation, useTranslation } from "react-i18next";
   // }
 }
  
-export default (NavigationBar);
+export default withTranslation(["nav"])(NavigationBar);

@@ -5,7 +5,8 @@ import XHR from 'i18next-xhr-backend';
 
 // English Translation JSONs
 import trainingEN from './i10n/en/training.json';
-// import loginEN from './locate/en/login.json';
+import navEN from './i10n/en/nav.json';
+import footerEN from './i10n/en/footer.json';
 // import landingEN from './locate/en/landing.json';
 // import aboutEN from "./locate/en/about.json";
 // import workshopsEN from "./locate/en/workshops.json";
@@ -13,8 +14,8 @@ import trainingEN from './i10n/en/training.json';
 
 // Tagalog Translation JSONs
 import trainingPH from './i10n/ph/training.json';
-// import loginFR from './locate/fr/login.json';
-// import landingFR from './locate/fr/landing.json';
+import navPH from './i10n/ph/nav.json';
+import footerPH from './i10n/ph/footer.json';
 // import aboutFR from "./locate/fr/about.json";
 // import workshopsFR from "./locate/fr/workshops.json";
 // import simsFR from "./locate/fr/sims.json";
@@ -27,8 +28,8 @@ i18n
     resources: {
         en: {
             training: trainingEN,
-            // login: loginEN,
-            // landing: landingEN,
+            nav: navEN,
+            footer: footerEN
             // about: aboutEN,
             // workshops: workshopsEN,
             // sims: simsEN
@@ -36,8 +37,8 @@ i18n
         ,
         ph: {
             training: trainingPH,
-        //     login: loginFR,
-        //     landing: landingFR,
+            nav: navPH,
+            footer: footerPH
         //     about: aboutFR,
         //     workshops: workshopsFR,
         //     sims: simsFR
@@ -55,13 +56,14 @@ i18n
     interpolation: {
         escapeValue: false,
         formatSeparator: ","
-    },
-    react: {
-        wait: true,
-        bindI18n: 'languageChanged loaded',
-        bindStore: 'added removed',
-        nsMode: 'default'
     }
+    // ,
+    // react: {
+    //     wait: true,
+    //     bindI18n: 'languageChanged loaded',
+    //     bindStore: 'added removed',
+    //     nsMode: 'default'
+    // }
 })
 
 export default i18n;

@@ -13,17 +13,17 @@ import Rep from './pages/rep';
 import Training from './pages/training';
 
 function App() {
-  const { t, i18n } = useTranslation();
-  const [initialized, setInitialized] = useState(false);
-  const changeLanguage = lng => {
-    i18n.changeLanguage(lng);
-  };
-  useEffect(() => {
-    if (!initialized) {
-      changeLanguage(localStorage.getItem("language") || "en");
-      setInitialized(true);
-    }
-  });
+  // const { t, i18n } = useTranslation();
+  // const [initialized, setInitialized] = useState(false);
+  // const changeLanguage = lng => {
+  //   i18n.changeLanguage(lng);
+  // };
+  // useEffect(() => {
+  //   if (!initialized) {
+  //     changeLanguage(localStorage.getItem("language") || "en");
+  //     setInitialized(true);
+  //   }
+  // });
   return (
     <Router>
       <Switch>

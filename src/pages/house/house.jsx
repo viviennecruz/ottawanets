@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Row, Col, Carousel, Button, Form } from 'react-bootstrap';
 import "react-datetime/css/react-datetime.css";
 import Datetime from 'react-datetime';
+import ReactTooltip from "react-tooltip";
 
 import style from "./house.css";
 
@@ -90,6 +91,14 @@ export class House extends Component {
                             <Form.Label>Grade</Form.Label>
                             <Form.Control type="text" placeholder="Grade" />
                             <Form.Control.Feedback tooltip>Looks good!</Form.Control.Feedback>
+                            <button data-tip data-for="registerTip">
+                               Why do we ask for your grade?
+                             </button>
+                    
+                             <ReactTooltip id="registerTip" place="top" effect="solid">
+                                We place players that are in the same grade on the same team and division so that
+                                the competition is considered fair.
+                              </ReactTooltip>
                         </Form.Group>
                     </Col>
                 </Row>
