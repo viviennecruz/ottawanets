@@ -52,14 +52,14 @@ const Training = ({ t }) => {
     const { name, food, rating, comment } = form
     const newErrors = {}
     // name errors"
-    if ( !name || name === '' ) newErrors.name = "{t('feedback2')}"
+    if ( !name || name === '' ) newErrors.name = "Cannot be blank!"
     else if ( name.length > 30 ) newErrors.name = "{t('feedback3')}"
     // food errors
-    if ( !food || food === '' ) newErrors.food = "{t('feedback4')}"
+    if ( !food || food === '' ) newErrors.food = "Cannot be blank!"
     // rating errors
     if ( !rating || rating > 5 || rating < 1 ) newErrors.rating = 'must assign a rating between 1 and 5!'
     // comment errors
-    if ( !comment || comment === '' ) newErrors.comment = "{t('feedback5')};"
+    if ( !comment || comment === '' ) newErrors.comment = "Cannot be blank!"
     else if ( comment.length > 150 ) newErrors.comment = "{t('feedback6')};"
 
     return newErrors
